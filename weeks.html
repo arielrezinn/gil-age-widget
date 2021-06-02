@@ -1,0 +1,33 @@
+<script>
+  var birthday = new Date(2021, 2, 9);
+
+  // Update the age count every 1 second
+  var x = setInterval(function () {
+    // Get todays date and time
+    var now = new Date();
+
+    // Find the distance between now an the count down date
+    var age = now - birthday;
+
+    // Time calculations for weeks and days
+    var weeks = Math.floor(age / (1000 * 60 * 60 * 24 * 7));
+    var days = Math.floor(
+      (age % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+    );
+
+    // Label calculations
+    var daysLabel;
+    if (days == 1) {
+      daysLabel = " day ";
+    } else {
+      daysLabel = " days ";
+    }
+
+    // Output the result in an element with id="ageInWeeks"
+    document.getElementById("ageInWeeks").innerHTML =
+      weeks + " weeks " + days + daysLabel + " old";
+  }, 1000);
+</script>
+<div style="text-align: center">
+  <p id="ageInWeeks"></p>
+</div>
