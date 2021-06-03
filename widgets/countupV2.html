@@ -1,0 +1,88 @@
+---
+title: Age in Months or Weeks
+description: Displays the time since March 9th, 2021. A single tap/click switches between showing the time in weeks/days and months/weeks/days and a double tap/click toggles dark mode.
+---
+
+<head>
+  <script>
+    var birthday = new Date(2021, 2, 9);
+    var now = new Date();
+    // Find the distance between now an the count down date
+    var age = now - birthday;
+
+    // Time calculations for weeks and days
+    var weeks = Math.floor(age / (1000 * 60 * 60 * 24 * 7));
+    var days = Math.floor(
+      (age % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+    );
+
+    // Time calculations for months, weeks, and days
+    var months = Math.floor(age / (1000 * 60 * 60 * 24 * 7 * 4));
+    var mWeeks = Math.floor(
+      (age % (1000 * 60 * 60 * 24 * 7 * 4)) / (1000 * 60 * 60 * 24 * 7)
+    );
+    var mDays = Math.floor(
+      (age % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+    );
+
+    // Label calculations
+    var mWeeksLabel;
+    if (mWeeks == 1) {
+      mWeeksLabel = " week ";
+    } else {
+      mWeeksLabel = " weeks ";
+    }
+    var mDaysLabel;
+    if (mDays == 1) {
+      mDaysLabel = " day ";
+    } else {
+      mDaysLabel = " days ";
+    }
+    var daysLabel;
+    if (days == 1) {
+      daysLabel = " day ";
+    } else {
+      daysLabel = " days ";
+    }
+
+    // Assign the times to variables"
+    var ageInMonths =
+      months + " months " + mWeeks + mWeeksLabel + mDays + mDaysLabel;
+    var ageInWeeks = weeks + " weeks " + days + daysLabel;
+
+    document.getElementById("age").innerHTML = ageInMonths;
+
+    function toggleAgeDisplay() {
+      var x = document.getElementById("age");
+      if (x.innerHTML === ageInMonths) {
+        x.innerHTML = ageInWeeks;
+      } else {
+        x.innerHTML = ageInMonths;
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fff;
+      color: #373530;
+    }
+    .dark {
+      background-color: #303437;
+      color: #eaebeb;
+    }
+    #container {
+      text-transform: capitalize;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      /* font-size: 1em; */
+    }
+  </style>
+</head>
+<body
+  onload="{toggleAgeDisplay()}"
+  onclick="{toggleAgeDisplay()}"
+  ondblclick="{document.body.classList.toggle('dark')}"
+>
+  <div id="container">
+    <p id="age"></p>
+  </div>
+</body>
