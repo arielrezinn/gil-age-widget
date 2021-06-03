@@ -41,6 +41,18 @@ title: Age in Months, Weeks, & Days
       months + " months " + mWeeks + mWeeksLabel + mDays + mDaysLabel + " old";
   }, 1000);
 </script>
-<div style="text-align: center">
+<div
+  style="
+    text-align: center;
+    @media (prefers-color-scheme: dark) {
+      background: #303437;
+      color: #eaebeb;
+    }
+    @media (prefers-color-scheme: light) {
+      background: #fff;
+      color: #373530;
+    } ;
+  "
+>
   <p id="ageInMonths"></p>
 </div>
