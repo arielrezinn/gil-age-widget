@@ -23,3 +23,7 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Get rid of the "GitHub Metadata: No GitHub API authentication could be 
+# found. Some fields may be missing or have incorrect data." error
+gem 'dotenv-rails', groups: [:development, :test]
