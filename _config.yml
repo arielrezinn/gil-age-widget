@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Notion Widgets
-description: This is a collection of widgets I wrote for use in Notion
+description: This is a collection of widgets I wrote for use in Notion. If
 baseurl: "/notion-widgets"
 url: "https://arielrezinn.github.io/"
 # logo: [Location of the logo]
