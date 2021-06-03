@@ -8,7 +8,7 @@ title: Test Colorful Countdown
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
     <title>Document</title>
-    <style>
+<style>
 
 body{
     background-color: white;
@@ -101,8 +101,8 @@ body{
 
 </body>
 <script>
-    const year = new Date().getFullYear();
-const myDate = new Date('Oct 15, 2024 00:00:00');
+const year = new Date().getFullYear();
+const myDate = new Date(2021, 2, 9);
 console.log(myDate);
 
 // countdown
@@ -125,8 +125,6 @@ let timer = setInterval(function() {
   document.getElementById("hours").innerHTML=hours
   document.getElementById("minutes").innerHTML=minutes
   document.getElementById("seconds").innerHTML=seconds
-
-
 
 }, 1);
 </script>

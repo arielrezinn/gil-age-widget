@@ -38,9 +38,26 @@ title: Age in Months, Weeks, & Days
 
     // Output the result in an element with id="ageInMonths"
     document.getElementById("ageInMonths").innerHTML =
-      months + " months " + mWeeks + mWeeksLabel + mDays + mDaysLabel + " old";
+      months + " months " + mWeeks + mWeeksLabel + mDays + mDaysLabel;
   }, 1000);
 </script>
-<div style="text-align: center">
+<style>
+  #timer {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    letter-spacing: 5px;
+
+    width: 500px;
+  }
+  #ageInMonths {
+    background-color: #678400;
+    color: #f2f7ce;
+    border-radius: 5px;
+    padding: 20px;
+  }
+</style>
+<div id="timer">
   <p id="ageInMonths"></p>
 </div>
