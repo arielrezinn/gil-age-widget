@@ -3,5 +3,5 @@ layout: default
 ---
 
 {% for widget in site.pages %}
-<a href="{{ widget.url }}">{{ widget.title }}</a>
+<a href="{{ site.baseurl }}{{ widget.url }}">{{ widget.title }}</a>
 {% endfor %}

@@ -19,6 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Notion Widgets
 description: This is a collection of widgets I wrote for use in Notion
+baseurl: "/notion-widgets"
+url: "https://arielrezinn.github.io/"
 # logo: [Location of the logo]
 # google_analytics: [Your Google Analytics tracking ID]
 
